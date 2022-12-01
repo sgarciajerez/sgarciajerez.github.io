@@ -1,0 +1,865 @@
+/*definir la paleta de colores*/
+
+:root{ 
+    --color-rosa-fuerte: #F28DB2;
+    --color-rosa-claro: #F2D5E0;
+    --color-verde-claro: #DFF2F0;
+    --color-verde-oscuro: #60BFAE;
+    --color-amarillo: #F2DA91;
+    --color-blanco:rgba(255, 255, 255, 0.9);
+}
+
+body{
+    margin: 0;
+    font-size: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+*{
+    outline: none;
+    font-family: 'Montserrat','Verdana',sans-serif;
+}
+
+
+/*---------Menú--------------*/
+
+.menu{
+    background-color: var(--color-amarillo);
+    position:fixed;
+    width: 100%;
+    z-index: 500;
+}
+
+#menu_abierto ul{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#menu_abierto ul a{
+    list-style: none;
+    color: var(--color-verde-oscuro);
+    font-weight: bold;
+    padding: 0.9375em 2em; 
+
+}
+#menu_abierto ul li{
+    list-style: none;
+}
+
+#menu_abierto ul a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+}
+ 
+ 
+#menu_close{
+    display: none;
+}
+
+.menu_desplegable{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0.625em;
+    padding: 0.125em 0;
+}
+
+.menu_desplegable_lineas{
+    height: 0.25em;
+    width: 1.875em;
+    background-color: var(--color-verde-oscuro);
+}
+
+#menu_close img{
+    height: 2.5em;
+    margin: auto;
+    float: left;
+}
+
+#menu_open{
+    height: 25em;
+    background-image: url(Images/fondo-menu.jpg);
+    background-size: 18.75em;
+    background-position-y: 2.5em;
+    background-repeat: no-repeat;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#menu_open .menu_desplegable{
+    margin: 0.3125em 0.625em;
+    width: 1.875em;
+    height: 1.875em;
+}
+
+
+#menu_open .menu_desplegable .menu_desplegable_lineas{
+    width: 130%;
+}
+
+#linea1{
+    transform: rotate(45deg);
+    position: relative;
+    right: 0.375em;
+    top: 0.375em;
+
+}
+
+#linea2{
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 0.375em;
+    right: 0.375em;
+}
+#menu_open span{
+    margin-right: 10px;
+}
+
+#menu_open li{
+    list-style: none;
+    text-align: center;
+    margin: 1.5625em 0;
+    font-size: 1.25em;
+    font-family: 'Montserrat' 'Courier New', Courier, monospace;
+}
+
+#menu_open a{
+    text-decoration: none;
+    color: var(--color-verde-oscuro);
+    font-weight: bold;
+}
+
+/*------------------------------------------HEADER*/
+
+header{
+    background-color: var(--color-verde-oscuro);
+    padding-top: 2.5em;
+    margin: auto;
+    padding: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". logo header_info ."
+    ;
+
+}
+
+header img{
+    width: 10em;
+    margin: auto;
+    grid-area: logo;
+}
+
+header img:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.header_info {
+   max-width: 22.8125em;
+    margin: auto;
+    margin: 50px auto;
+    grid-area: header_info;
+}
+.header_info h1{
+    text-align: center;
+    font-size: 1.0625em;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: var(--color-blanco);
+}
+.header_info h2{
+    text-align: center;
+    font-size: 0.9375em;
+    text-transform: none;
+    color: var(--color-blanco);
+}
+
+.header_buttons{
+    width: 18.75em;
+    margin: auto;
+    display: block;
+    position: relative;
+    padding: 1.3em 0;
+}
+.header_buttons button{
+    padding: 0.625em;
+    width: 10em;
+    font-size: 0.875em;
+    font-weight: bold;
+    text-transform: none;
+    background-color: var(--color-rosa-fuerte);
+    color:var(--color-blanco);
+    border: none;
+}
+
+.buttonConsulta{
+    grid-area: button1;
+}
+.buttonContacto{
+    grid-area: button2;
+}
+
+/*---------------------Estilos para "+20 +800 pacientes" con dos datos*/
+
+.home_info{
+    width: 100%;
+    background-color: var(--color-blanco);
+    display: grid;
+    margin: auto;
+    grid-template-columns: 0.5fr 1.2fr 1fr 0.5fr;
+    grid-template-areas: 
+    ". info pie ."
+    ". form pie ."
+    ". marco marco ."
+    ;
+}
+
+.home_info_data{
+    width: 80%;
+    margin: auto;
+    grid-area: info;
+}
+
+.home_info_data_tittle{
+    max-width: 22.5em;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+.home_info_data_tittle img{
+    width: 2.5em;
+    position: absolute;
+}
+.tituloBlanco{
+    color: var(--color-rosa-fuerte);
+    margin: auto;
+    margin-top: 0.625em;
+    padding: 0.625em 0;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0.9375em;
+    font-size: 1.25em;
+}
+
+.home_data_grid{
+    display: grid;
+    grid-template-areas:
+    "data1 data2";
+}
+
+.home_data1{
+    grid-area: data1;
+}
+
+.home_data2{
+    grid-area: data2;
+}
+
+.home_data_numero{
+    text-align: center;
+    font-size: 1.5625em;
+    color: var(--color-rosa-fuerte);
+    margin-top:0.625em;
+    margin-bottom: 0.9375em;
+}
+
+.home_data_cuerpo{
+    text-align: center;
+    font-size: 0.9375em;
+    margin: 0.625em 0.9375em 0 0.9375em;
+    color:var(--color-rosa-fuerte);
+}
+
+
+
+/*------------------------------------------Formulario*/
+
+.home_form{
+    display:block;
+    margin: auto;
+    width: 10.625em;
+    margin: auto;
+    grid-area: form;
+}
+
+.home_form .home_form_titulo{
+    text-align: center;
+    font-size: 0.9375em;
+    margin-top: 2.1875em;
+    font-weight: 50;
+    color: var(--color-rosa-fuerte);
+}
+
+.home_form_label{
+    font-size: 1em;
+    color: var(--color-rosa-fuerte);
+    text-align: center;
+    font-weight: bold;
+}
+.home_form .home_form_input{
+    margin-top: 0.625em;
+    padding: 0.625em;
+    width: 89%;
+    margin-bottom: 0.625em;
+}
+
+.home_form_button{
+    margin: auto;
+    text-align: center;
+    margin-top: 0.9375em;
+    padding: 0.625em;
+    width: 103%;
+    margin-bottom: 1.875em;
+    background-color: #F28DB2;
+    border: none;
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 0.9375em;
+}
+
+
+/*---------------------Estilos del pie del formulario*/
+
+.home_pieform{
+    background-color: var(--color-rosa-fuerte);
+    padding: 0.625em;
+    grid-area: pie;
+}
+
+.home_pieform_contenedor{
+    width: 90%;
+    margin: auto;
+    margin-bottom:3.125em;
+}
+
+.home_pieform_contenedor h3{
+    text-align: center;
+    font-weight: normal;
+    margin: 0.9375em 2.5em 0.625em 2.5em;
+    padding: 0.9375em;
+    font-size: 1.125em;
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+.home_pieform_contenedor ol li{
+    margin: 0.625em 0;
+    font-size: 0.875em;
+    color: var(--color-blanco);
+}
+
+
+/*Estilos para hacer redonda la imagen de la dietista*/
+
+.home_marco{
+    padding: 2.1875em 0;
+    grid-area: marco;
+}
+
+.home_marco_ajustado{
+    max-width: 22.5em;
+    margin: auto;
+}
+
+.home_marco_ajustado_icono{
+    margin: auto;
+    width: 50%;
+}
+
+.home_marco_ajustado_icono img{
+    width: 100%;
+    margin: auto;
+    padding: auto;
+    margin-bottom: 0;
+}
+
+.home_marco_ajustado_redes{
+    display: flex;
+    margin: 0.3125em;
+    padding: 0.3125em;
+    justify-content: space-evenly;
+}
+
+.home_marco_ajustado_redes img{
+    clip-path: circle(50% at 50% 50%);
+    width: 3.125em;
+    margin: auto;
+    padding: auto;
+}
+
+.home_marco_firma{
+    min-width: 18.75em;
+    max-width: 23.75em;
+    margin: auto;
+    padding: 0 1.25em;
+}
+
+.home_marco_firma_pie{
+    text-align: center;
+    font-size: 1em;
+}
+
+.home_marco_firma_nombre{
+    font-size: 1.5625em;
+    text-align: center;
+    color: #F28DB2;
+    text-transform: uppercase;
+}
+
+
+/* ---------------------Estilos para el Slider */
+
+.home_slider{
+    background-color: #f28db2;
+    padding: 1.5625em 0;
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns: 0.3fr 2fr 1.5fr 0.3fr;
+    grid-template-areas: 
+    ". slider iconos ."
+    ". slider-pie iconos ."
+    ;
+}
+
+.home_slider_container {
+    width: 80%;
+    max-width: 120em;
+    min-width: 12em;
+    min-height: 30.875em;
+    margin: auto;
+    display: block;
+    padding: auto;
+    overflow: hidden;
+    position: relative;
+    grid-area: slider;
+}
+
+.home_slider_container img{
+    width: 100%;
+    min-width: 18.75em;
+    min-height: 15.625em;
+    height: auto;
+    max-height: 21.875em;
+    padding: auto;
+    margin: auto;
+    position: absolute;
+    transition: all 0.6s ease;
+}
+
+.home_slider_container_titulo, .titulo_fondo_rosa{
+    text-align: center;
+    color:var(--color-blanco);
+    font-size: 2.18em;
+    margin: 0.93em 0;
+    transition: all 0.6 ease;
+    text-transform: uppercase;
+    letter-spacing: 0.1875em;
+
+}
+
+.home_slider_muestra{
+    grid-area: slider-pie;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 1.875em;
+    min-width: 25em;
+    margin-top: 1.25em;
+    margin: 0 7em;
+    margin-bottom: 1.25em;
+
+}
+
+.home_slider_muestra_imagen{
+    background-color: var(--color-blanco);
+    height: 0.625em;
+    width: 0.625em;
+    border-radius: 50%;
+    transition: all 0.6s ease;
+}
+
+.home_slider #slider-img1{
+    z-index: 200;
+}
+
+.home_slider #slider-img2{
+    z-index: 150;
+}
+.home_slider #slider-img3{
+    z-index: 100;
+}
+.home_slider #slider-img4{
+    z-index: 50;
+}
+
+/*------------Estilos en parte de iconos-----------*/
+
+.home_slider_pie{
+    padding-top: 0.9375em;
+    width: 80%;
+    max-width: 25em;
+    margin: auto;
+    margin-bottom: 0;
+    grid-area: iconos;
+}
+.home_slider_pie h2{
+    font-size: 1.5625em;
+}
+
+.home_slider_pie ul img{
+    float: left;
+    margin-right:0.9375em;
+    margin-left: auto;
+    width: 3.125em;
+    height: 3.125em;
+}
+
+.home_slider_pie ul li{
+    list-style: none;
+    color: var(--color-blanco);
+    font-size: 20px;
+    margin: 1.5625em 0;
+}
+.home_slider_listaIconos{
+    padding-top: 1em;
+}
+
+/* ----------------ESTILOS DE FORMULARIO 2*/
+
+.home_destacado{
+    margin-top: 0;
+    padding: 1.25em 0;
+    background-color: var(--color-verde-oscuro);
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.home_destacado_contenedor{
+    max-width: 18em;
+    padding: 40px;
+    
+}
+
+.home_destacado_contenedor_titulo{
+    font-size: 1.5em;
+}
+
+.home_destacado_contenedor_imagen{
+    overflow: hidden;
+    height: auto;
+    border-radius: 1.5625em;
+    padding: 0;
+    margin: 0;
+}
+.home_destacado_contenedor_imagen img{
+    width: 100%;
+}
+
+.home_destacado_contenedor_pie {
+    color: var(--color-blanco);
+    text-align: justify;
+    font-weight: bold;
+    padding-bottom: 0.625em;
+}
+
+.home_mapa{
+    width: 18.75em;
+    margin: 3.6em auto;
+    margin-bottom: 1.25em;
+    grid-area: mapa;
+}
+
+.home_info_2{
+    display:grid;
+    grid-template-columns:0.5fr 1fr 1fr 0.5fr ;
+    grid-template-areas:
+    ". info mapa ."
+    ;
+}
+
+/*Estilos del footer*/
+
+
+footer{
+    background-color: var(--color-verde-oscuro);
+    margin: 0;
+    padding: 0.9375em;
+    display: grid;
+    grid-template-areas:
+    "marco listado"
+    ;
+}
+
+.home_marco{
+    grid-area: marco;
+}
+
+.footer_listado{
+    grid-area: listado;
+}
+
+
+.home_marco_info{
+    max-width: 11.875em;
+    margin: auto;
+    margin-top: 1.5625em;
+}
+
+footer .home_marco_info_titulo {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    display: block;
+    font-size: 0.8125em;
+    font-weight: 700;
+    color: var(--color-blanco);
+    padding-bottom: 0.5em;
+    border-bottom: 0.125em solid var(--color-blanco);
+    margin-bottom: 0.5em;
+}
+
+footer .home_marco_info_pie {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    text-transform: none;
+    display: block;
+    font-size: 0.8125em;
+    font-weight: 700;
+    color: var(--color-blanco);
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.footer_listado{
+    width: auto;
+    max-width: 21.875em;
+    margin: auto;
+    padding: 0 0 1.25em 0;
+}
+
+.footer_listado_tittle{
+    color: var(--color-blanco);
+    font-weight: 700;
+    border-bottom: 2px solid var(--color-blanco);
+    margin-right: 2.5em;
+}
+
+.footer_listado li{
+    list-style: none;
+}
+
+.footer_listado_lista{
+    text-decoration: none;
+    color: var(--color-blanco);
+    font-weight: 500;
+}
+
+
+/* Todos los hover de la página */
+
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+a:hover{
+    opacity: 0.7;
+    cursor: pointer; 
+}
+
+.home_slider_container a:hover{
+    opacity: 1;
+}
+
+.home_marco_ajustado_redes a:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+
+
+/* --         ESITLOS PÁGINA DE CONTACTO --------- */
+
+.contacto_menu{
+    padding-top: 0.85em;   
+}
+
+.contacto_info{
+    padding-top: 4.3em;
+}
+
+.contacto_form{
+    width: 400px;
+}
+.contacto_form label{
+    color: var(--color-rosa-fuerte);
+}
+.contacto_form_button{
+        margin: auto;
+        text-align: center;
+        margin-top: 0.9375em;
+        padding: 0.625em;
+        width: 400px;
+        margin-bottom: 1.875em;
+        background-color: var(--color-rosa-fuerte);
+        border: none;
+        color: var(--color-blanco);
+        font-weight: bold;
+        font-size: 0.9375em;
+}
+
+.contacto_mapa{
+    margin-top: 3.4375em;
+}
+
+
+/* El diseño responsive */
+
+
+
+@media (max-width: 1200px) {
+    body{
+        font-size: 16px;
+    }
+    .home_destacado_contenedor{
+        max-width: 20em;        
+    }
+    
+    
+}
+
+@media (max-width: 1080px) {
+    body{
+        font-size: 20px;
+    }
+
+    #menu_abierto{
+        display: none;
+    }
+
+    #menu_close{
+        display:flex;
+    }
+    #menu_open{
+        height: 25em;
+        background-image: url(Images/fondo-menu.jpg);
+        background-size: 18.75em;
+        background-position-y: 2.5em;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        display: none;
+    }
+
+    #menu_open{
+        display:none;
+    }
+    .home_info{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "info"
+        "form"
+        "pie"
+        "marco"
+        ;
+    }
+
+    .home_slider{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "slider"
+        "slider-pie" 
+        "iconos"
+        ;
+    }
+    .home_slider_container{
+        min-height: 25.8em;
+        max-width: 35em;
+    }
+
+    .home_slider_pie{
+        border-top: var(--color-blanco) solid 0.125em;
+    }
+
+
+    .home_slider_muestra{
+        padding-top:30px;
+        padding-bottom: 10px;
+    }
+    
+    .home_slider_muestra_imagen{
+        height: 0.625em;
+        width: 0.625em;
+    }
+    
+    .home_destacado{
+        flex-direction: column;
+    }
+
+    .home_destacado_contenedor{
+        padding: 0;
+    }
+    .home_info_2{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "info" 
+        "mapa"
+        ;   
+    }
+    .home_mapa{
+        margin: 0.5em auto;
+        margin-bottom: 1.25em;
+    }
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 18px;  
+      } 
+      header{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+      "logo" 
+      "header_info"
+      ;
+      }
+      .header_info{
+        margin: 0 auto;
+      }
+      .home_slider_container{
+        min-height: 23.8em;
+      }
+      .home_slider_muestra{
+        min-width: 15em;
+        margin: 0;
+
+      }
+
+
+      footer{
+        grid-template-areas:
+        "marco"
+        "listado";
+    }
+}
+
+@media (max-width: 550px) {
+    body{
+      font-size: 15px;  
+    }
+}
