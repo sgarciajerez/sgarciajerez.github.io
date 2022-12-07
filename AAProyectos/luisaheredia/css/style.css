@@ -31,6 +31,8 @@ a{
     position:fixed;
     width: 100%;
     z-index: 500;
+    box-shadow: 5px 2px 12px grey;
+
 }
 
 #menu_abierto ul{
@@ -284,7 +286,7 @@ header img:hover{
 .home_form{
     display:block;
     margin: auto;
-    width: 10.625em;
+    width: 15em;
     margin: auto;
     grid-area: form;
 }
@@ -303,6 +305,7 @@ header img:hover{
     text-align: center;
     font-weight: bold;
 }
+
 .home_form .home_form_input{
     margin-top: 0.625em;
     padding: 0.625em;
@@ -315,7 +318,7 @@ header img:hover{
     text-align: center;
     margin-top: 0.9375em;
     padding: 0.625em;
-    width: 103%;
+    width: 95%;
     margin-bottom: 1.875em;
     background-color: #F28DB2;
     border: none;
@@ -429,13 +432,13 @@ header img:hover{
 }
 
 .home_slider_container {
-    width: 80%;
+    width: 100%;
     max-width: 120em;
     min-width: 12em;
-    min-height: 30.875em;
+    min-height: 32em;
     margin: auto;
-    display: block;
     padding: auto;
+    display: block;
     overflow: hidden;
     position: relative;
     grid-area: slider;
@@ -444,9 +447,8 @@ header img:hover{
 .home_slider_container img{
     width: 100%;
     min-width: 18.75em;
-    min-height: 15.625em;
+    min-height: 25.625em;
     height: auto;
-    max-height: 21.875em;
     padding: auto;
     margin: auto;
     position: absolute;
@@ -471,7 +473,7 @@ header img:hover{
     min-height: 1.875em;
     min-width: 25em;
     margin-top: 1.25em;
-    margin: 0 7em;
+    margin: 2em 7em;
     margin-bottom: 1.25em;
 
 }
@@ -554,10 +556,12 @@ header img:hover{
 
 .home_destacado_contenedor_imagen{
     overflow: hidden;
-    height: auto;
+    height: 52%;
     border-radius: 1.5625em;
     padding: 0;
     margin: 0;
+    box-shadow: 5px 2px 12px grey;
+
 }
 .home_destacado_contenedor_imagen img{
     width: 100%;
@@ -798,7 +802,6 @@ a:hover{
 
 
     .home_slider_muestra{
-        padding-top:30px;
         padding-bottom: 10px;
     }
     
@@ -830,8 +833,15 @@ a:hover{
 @media (max-width: 768px) {
     body{
         font-size: 18px;  
-      } 
+      }
+      #menu_close{
+        padding: 10px 0;
+    } 
+    #menu_open{
+        padding: 10px 0;
+    } 
       header{
+        padding-top: 70px;
         grid-template-columns: 1fr;
         grid-template-areas: 
       "logo" 
@@ -842,14 +852,17 @@ a:hover{
         margin: 0 auto;
       }
       .home_slider_container{
-        min-height: 23.8em;
+        width: 80%;
+        max-width: 100em;
+      }
+      .home_slider_container img{
+        width: 100%;
+        min-height: 16em;
+
       }
       .home_slider_muestra{
         min-width: 15em;
-        margin: 0;
-
       }
-
 
       footer{
         grid-template-areas:
@@ -862,4 +875,7 @@ a:hover{
     body{
       font-size: 15px;  
     }
+    .home_slider_container{
+        width: 80%;
+      }
 }
