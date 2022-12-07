@@ -423,6 +423,7 @@ header img:hover{
     background-color: #f28db2;
     padding: 1.5625em 0;
     margin-bottom: 0;
+    margin: auto;
     display: grid;
     grid-template-columns: 0.3fr 2fr 1.5fr 0.3fr;
     grid-template-areas: 
@@ -434,7 +435,7 @@ header img:hover{
 .home_slider_container {
     width: 100%;
     max-width: 120em;
-    min-width: 12em;
+    min-width: 3em;
     min-height: 32em;
     margin: auto;
     padding: auto;
@@ -525,7 +526,7 @@ header img:hover{
 .home_slider_pie ul li{
     list-style: none;
     color: var(--color-blanco);
-    font-size: 20px;
+    font-size: 1.25em;
     margin: 1.5625em 0;
 }
 .home_slider_listaIconos{
@@ -784,7 +785,7 @@ a:hover{
     }
 
     .home_slider{
-        grid-template-columns: 1fr;
+        grid-template-columns:1fr;
         grid-template-areas: 
         "slider"
         "slider-pie" 
@@ -878,4 +879,13 @@ a:hover{
     .home_slider_container{
         width: 80%;
       }
+    .home_slider_container img{
+        max-height: 280px;
+    }
+      .home_slider_container_titulo{
+        font-size: 1.9em;
+      }
+    .home_slider_muestra{
+        margin:5px 0;
+    }
 }
