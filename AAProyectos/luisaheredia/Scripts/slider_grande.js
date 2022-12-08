@@ -23,8 +23,17 @@
         sliders[value-1].classList.toggle('slider_body--show');
     }
 
+    function cambiarBoton(){
+         arrowNext.className="slider_efecto";
+         setTimeout( ()=> {
+            arrowNext.className="slider_arrow";
+         }, 470);
+         clearTimeout();
+    }
+
     setInterval(function (){
         changePosition(1);
+        cambiarBoton();
     }, 4000);
 
 

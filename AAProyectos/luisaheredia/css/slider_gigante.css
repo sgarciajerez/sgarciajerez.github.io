@@ -70,17 +70,27 @@
 }
 
 .slider_arrow:hover{
-    opacity: 0.8;
-    border: 15px solid rgba(255, 255, 255, 0.8);
-    width: 100px;
-    top: 400px;
-    transition: all 0.7s;
+    opacity: 1;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    width: 80px;
+    top: 420px;
+    transition: all 0.4s;
+}
+
+.slider_efecto{
+    position: absolute;
+    opacity: 1;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    width: 80px;
+    top: 420px;
+    z-index: 200;
+    transition: all 0.4s;
 }
 
 #before{
     left: 100px;
 }
-
 
 
 #after{
