@@ -14,7 +14,7 @@
     color: var(--color-blanco);
     margin: auto;
     background-position: center;
-    background-image: url(images/blog3.jpg);
+    background-image: url(images/blog2.jpg);
     grid-template-columns: 0.3fr 1fr 0.3fr;
     grid-template-areas:
     ". h1 ."
@@ -31,41 +31,42 @@
     font-size: 2em;
 }
 
-.blog_listado{
-    background-color: var(--color-rosa-fuerte);
-    border-bottom: 15px solid white;
-    padding: 3.125em;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.menu{
+    padding-top: 0.85em;   
 }
 
-.blog_listado_contenedor h2{
+.contacto_form{
+    width: 400px;
+}
+.contacto_form label{
     color: var(--color-rosa-fuerte);
 }
-
-.blog_listado_contenedor{
-    width: 100%;
-    max-width: 20em;
-    padding: 0.9375em;
-    margin: 50px 20px;
-    text-align: center;
-    background-color: var(--color-blanco);
-    border-radius: 15px;
-    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+.contacto_form_button{
+        margin: auto;
+        text-align: center;
+        margin-top: 0.9375em;
+        padding: 0.625em;
+        width: 400px;
+        margin-bottom: 1.875em;
+        background-color: var(--color-rosa-fuerte);
+        border: none;
+        color: var(--color-blanco);
+        font-weight: bold;
+        font-size: 0.9375em;
 }
 
-.blog_listado_contenedor img{
-    width: 19em;
+.contacto_mapa{
+    margin-top: 3.4375em;
+}
+
+.home_mapa{
+    width: 20em;
+    height: 38em;
     margin: auto;
-    display: block;
-    border-radius: 15px;
 }
 
-.blog_listado_contenedor:hover{
-    cursor: pointer;
-    opacity: 0.7;
-    transition: all 0.3s ease;
+.home_form_button{
+    margin-bottom: 30px;
 }
 
 
@@ -81,6 +82,12 @@
 }
 
 @media (max-width: 768px) {
+    .contacto_form_button{
+        margin-bottom: 0.3em;
+}
+.home_form_button{
+    margin-bottom: 0;
+}
 
 }
 

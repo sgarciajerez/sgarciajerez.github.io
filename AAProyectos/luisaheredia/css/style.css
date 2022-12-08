@@ -696,42 +696,6 @@ a:hover{
 }
 
 
-
-/* --         ESITLOS PÁGINA DE CONTACTO --------- */
-
-.contacto_menu{
-    padding-top: 0.85em;   
-}
-
-.contacto_info{
-    padding-top: 4.3em;
-}
-
-.contacto_form{
-    width: 400px;
-}
-.contacto_form label{
-    color: var(--color-rosa-fuerte);
-}
-.contacto_form_button{
-        margin: auto;
-        text-align: center;
-        margin-top: 0.9375em;
-        padding: 0.625em;
-        width: 400px;
-        margin-bottom: 1.875em;
-        background-color: var(--color-rosa-fuerte);
-        border: none;
-        color: var(--color-blanco);
-        font-weight: bold;
-        font-size: 0.9375em;
-}
-
-.contacto_mapa{
-    margin-top: 3.4375em;
-}
-
-
 /* El diseño responsive */
 
 
