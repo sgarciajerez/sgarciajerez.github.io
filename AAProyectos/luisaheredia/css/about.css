@@ -1,0 +1,122 @@
+:root{ 
+    --color-rosa-fuerte: #F28DB2;
+    --color-rosa-claro: #F2D5E0;
+    --color-verde-claro: #DFF2F0;
+    --color-verde-oscuro: #60BFAE;
+    --color-amarillo: #F2DA91;
+    --color-blanco:rgba(255, 255, 255, 0.9);
+}
+body{
+    font-size: 18px;
+}
+
+.header_pages{
+    display: grid;
+    padding: 5.625em 0 2.5em 0;
+    text-align: center;
+    color: var(--color-blanco);
+    margin: auto;
+    background-position: center;
+    background-image: url(images/about.jpg);
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-areas:
+    ". h1 ."
+    ;
+    border-bottom: 15px solid white;
+}
+
+.header_pages h1{
+    grid-area: h1;
+    background-color: var(--color-verde-oscuro);
+    border-radius: 0.9375em;
+    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+    padding: 0.3125em;
+    font-size: 2em;
+}
+
+.about_info{
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr 1fr 0.2fr;
+    grid-template-areas: 
+    ". imagen texto ."
+    ;
+}
+
+.about_info img{
+    width: 30em;
+    grid-area: imagen;
+}
+
+.about_info_datos{
+    background-color: #F28DB2;
+    padding: 1.875em;
+    grid-area: texto;
+    color: var(--color-blanco);
+    margin: 0 20px;
+    margin-bottom: 0.9375em;
+    box-shadow: 10px 10px 30px gray;
+}
+
+
+@media (max-width: 1200px) {
+    body{
+        font-size: 16px;
+    }
+    
+}
+
+@media (max-width: 1080px) {
+    body{
+        font-size: 18px;
+    }
+    .header_pages h1{
+        font-size: 1.3em;
+    }
+
+    .about_info{
+        grid-template-columns: 0.2fr 1fr 0.2fr;
+        grid-template-areas:
+        ". texto ."
+        ". imagen ."
+        ;
+    }
+    .about_info img{
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: 16px;
+    }
+    .contacto_form_button{
+        margin-bottom: 0.3em;
+}
+.home_form_button{
+    margin-bottom: 0;
+}
+
+}
+
+@media (max-width: 550px) {
+    .header_pages h1{
+        font-size: 1.25em;
+    }
+    .blog_listado_contenedor img{
+        width: 17.5em;
+    }
+    .about_info{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "texto"
+        "imagen"
+        ;
+
+    }
+    
+    .about_info img{
+        width: 18em;
+    }
+
+}
