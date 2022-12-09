@@ -147,6 +147,7 @@ header{
     grid-template-areas: 
     ". logo header_info ."
     ;
+    border-top: 15px solid var(--color-amarillo);
 
 }
 

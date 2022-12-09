@@ -1,15 +1,25 @@
+:root{ 
+    --color-rosa-fuerte: #F28DB2;
+    --color-rosa-claro: #F2D5E0;
+    --color-verde-claro: #DFF2F0;
+    --color-verde-oscuro: #60BFAE;
+    --color-amarillo: #F2DA91;
+    --color-blanco:rgba(255, 255, 255, 0.9);
+}
 
+.body {
+    font-size: 16px;
+}
 .contenedor_slider{
     width: 100%;
-    max-width: 1920px;
-    min-height: 100vh;
-    max-height: 800px;
+    max-width: 100em;
+    max-height: 45.5em;
     margin: 0 auto;
     overflow: hidden;
 }
 
 .slider_gigante{
-    padding: 60px 0 0 0 ;
+    padding: 3.2em 0 0 0 ;
 }
 .slider_gigante_container{
     display: grid;
@@ -21,7 +31,7 @@
     grid-column: 2/3;
     grid-row: 1/2;
     pointer-events: none;
-    background-color: black;
+    background-color: var(--color-verde-oscuro);
     opacity: 0;
     transition: opacity 1.5s;
 }
@@ -38,7 +48,7 @@
 }
 
 #imagen_slider{
-    opacity: 0.3;
+    opacity: 0.6;
     z-index: -50;
 }
 
@@ -49,21 +59,27 @@
 
 .slider_texts{
     position: absolute;
-    background-color: #f2f2f2;
-    width: 500px;
+    background-color: var(--color-rosa-fuerte);
+    width: 25em;
+    height: 6em;
+    color: var(--color-blanco);
     text-align: center;
-    border-radius: 60px;
-    padding: 5px 20px;
-    box-shadow: 10px 5px 20px gray;
+    border-radius: 3.5em;
+    padding: 0.3125em 1.25em;
+    box-shadow: 2px 5px 30px var(--color-amarillo);
     z-index: 100;
-    top: 340px;
-    left: 300px;
+    top: 16.7em;
+    left: 15em;
+}
+
+.slider_texts h2{
+    font-size: 1.4em;
 }
 
 .slider_arrow{
     position: absolute;
-    width: 70px;
-    top: 430px;
+    width: 3em;
+    top: 21.5em;
     cursor: pointer;
     z-index: 200;
     border-radius: 50%;
@@ -72,8 +88,8 @@
 .slider_arrow:hover{
     opacity: 1;
     border: 5px solid rgba(255, 255, 255, 0.8);
-    width: 80px;
-    top: 420px;
+    width: 3.2em;
+    top: 21.3em;
     transition: all 0.4s;
 }
 
@@ -82,17 +98,154 @@
     opacity: 1;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.8);
-    width: 80px;
-    top: 420px;
+    width: 3.2em;
+    top: 21.3em;
     z-index: 200;
     transition: all 0.4s;
 }
 
 #before{
-    left: 100px;
+    left: 4em;
 }
 
 
 #after{
-    right: 100px;
+    right: 4em;
+}
+
+.span_animado{
+    position: absolute;
+    top: 19.2em;
+    font-weight: 700;
+    font-size: 1.24em;
+    left: 19.5em;
+    color: var(--color-blanco);
+    font-family: 'Montserrat', sans-serif;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 11ch;
+    text-align: center;
+    margin: auto;
+    z-index: 200;
+
+    animation: typing 2s steps(11),
+    blink .5s infinite step-end alternate;
+    overflow:hidden;
+}
+
+@keyframes typing {
+
+from { width: 0}
+}
+
+@keyframes blink {
+ 20% { border-color: transparent}
+}
+
+
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1080px) {
+    .slider_gigante{
+        padding: 2.5em 0 0 0 ;
+    }
+
+    .contenedor_slider{
+        width: 100%;
+        max-height: 100em;
+    }
+    
+    .slider_img{
+        width: 160%;
+        height: 45em;
+    }
+
+    .slider_arrow{
+        width: 2.5em;
+        top: 8em;
+    }
+    
+    .slider_arrow:hover{
+        width: 2.1em;
+        top: 7.9em;
+    }
+    
+    .slider_efecto{
+        width: 2.1em;
+        top: 7.9em;
+    }
+
+    .slider_texts{
+        width: 16em;
+        height: 4em;
+        padding: 0.3125em 1.25em;
+        top: -70%;
+        right: 0;
+        left: 0;
+        bottom:0;
+        margin: auto;
+    }
+
+    .slider_texts h2{
+        font-size: 1em;
+    }
+
+    .span_animado{
+        top: 19.5%;
+        right: 0;
+        left: 0;
+        bottom: 78.5%;
+        font-size: 1em;
+        margin: auto;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #before{
+        left: 2em;
+    }
+    
+    
+    #after{
+        right: 2em;
+    }
+
+    .span_animado{
+        top: 17.5%;
+        bottom: 80.5%;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .slider_img{
+        width: 170%;
+        height: 400px;
+    }
+
+    #before{
+        left: 4em;
+    }
+    
+    
+    #after{
+        right: 4em;
+    }
+
+    .slider_texts{
+        top: 70%;
+    }
+
+    .span_animado{
+        top: 39.5%;
+        bottom: 58.6%;
+    }
+
+
 }
