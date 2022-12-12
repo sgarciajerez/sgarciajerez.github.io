@@ -55,17 +55,23 @@
     grid-area: imc_calculadora;
     margin: 50px auto;
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 350px 350px;
+    align-items: center;
     grid-template-areas: 
     "iconos edad"
     "peso altura"
     "imc_boton imc_boton"
     ;
+    background-color: var(--color-rosa-fuerte);
+    padding: 50px;
+    border-radius: 20px;
+    color: var(--color-blanco);
+    font-weight: 700;
+    border: solid 10px var(--color-amarillo);
 }
 
 .imc_container .imc_iconos{
     grid-area: iconos;
-    margin-bottom: 2em;
     display: grid;
     grid-template-areas: 
     "masculino femenino";
@@ -78,6 +84,7 @@
 }
 
 .imc_iconos a{
+    margin: 0 auto;
     display: grid;
     grid-template-areas:
     "imagen"
@@ -92,14 +99,19 @@
     grid-area: span;
 }
 
-.imc_iconos img:hover{
+.imc_iconos .imagen_deselected:hover{
     border-radius: 50%;
-    border: 5px solid var(--color-verde-oscuro);
+    border: 5px solid var(--color-amarillo);
 }
 .imagen_selected{
     border-radius: 50%;
     border: 5px solid var(--color-verde-oscuro);
 }
+.imagen_selected:hover{
+    border-radius: 50%;
+    border: 5px solid var(--color-verde-oscuro);
+}
+
 
 .imc_container .imc_edad{
     grid-area: edad;
@@ -110,10 +122,93 @@
 }
 .imc_container .imc_altura{
     grid-area: altura;
+    margin-bottom: 2em;
 }
 .imc_container .btn-resultado{
     grid-area: imc_boton;
     margin: auto 100px;
+}
+
+.imc_input{
+    display: block;
+    position: relative;
+    border: white solid 5px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 230px;
+    height: 120px;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.imc_container_numero{
+    background-color:white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    border-radius: 50%;
+    text-align: center;
+    padding: auto;
+    left: 45%;
+    top: -9%;
+    color: var(--color-rosa-fuerte);
+}
+
+.imc_container div input{
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 20px;
+    width: 60px;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    
+}
+
+.btn-resultado{
+    padding: 15px;
+    font-size: 20px;
+    margin: 0 auto;
+    border: none;
+    box-shadow: 2px 2px 5px black;
+    border-radius: 20px;
+    background-color: var(--color-verde-oscuro);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-resultado::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-right: 55px solid transparent;
+    border-bottom: 55px solid var(--color-amarillo);
+    z-index: 1;
+    transition: .4s ease-in-out all;
+}
+
+.btn-resultado span{
+    position: relative;
+    z-index: 2;
+}
+
+.btn-resultado:hover::after{
+    left: 0;
+}
+
+.btn-resultado:hover{
+    opacity: 1;
+    border-radius: 20px;
+    color:var(--color-verde-oscuro);
+
 }
 
 .container .imc_container_resultado{

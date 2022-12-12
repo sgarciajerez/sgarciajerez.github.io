@@ -67,29 +67,49 @@
             </p>
         </div>
         <div class="imc_container">
-            <div class="imc_iconos">
+            <div class="imc_iconos imc_input">
+                <div class="imc_container_numero">
+                    <span>1</span>
+                </div>
                 <a id="masculino" class="imc_container_iconos">
-                    <img id="icono_hombre" src="Images/IMC/icono_hombre.png" alt="">
+                    <img id="icono_hombre" class="imagen_deselected" src="Images/IMC/icono_hombre.png" alt="">
                     <span>Masculino</span>
                 </a>
                 <a id="femenino">
-                    <img id="icono_mujer" src="Images/IMC/icono_mujer.png" alt="">
+                    <img id="icono_mujer" class="imagen_deselected" src="Images/IMC/icono_mujer.png" alt="">
                     <span>Femenino</span>
                 </a>
             </div>
-            <div class="imc_edad" id="edad">
-                <label for="edad">Edad</label>
-                <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad...">
+            <div class="imc_edad imc_input">
+                <div class="imc_container_numero">
+                    <span>2</span>
+                </div>
+                <div imc_container_input>
+                    <p for="edad">¿Cuál es tu edad?</p>
+                    <input type="number" name="edad" id="edad" placeholder="XX">
+                </div>
             </div>
-            <div class="imc_peso">
-                <label for="peso">Peso (Kg)</label>
-                <input type="number" name="peso" id="peso" placeholder="Ingresa tu peso..." required>
+            <div class="imc_peso imc_input">
+                <div class="imc_container_numero">
+                    <span>3</span>
+                </div>
+                <div imc_container_input>
+                    <p for="peso">¿Cuánto pesas? (Kg)</p>
+                    <input type="number" name="peso" id="peso" placeholder="XX" required>    
+                </div>
+
+
             </div>
-            <div class="imc_altura">
-                <label for="altura">Altura (cm)</label>
-                <input type="number" name="altura" id="altura" placeholder="Ingresa tu altura..." required>
+            <div class="imc_altura imc_input">
+                <div class="imc_container_numero">
+                    <span>4</span>
+                </div>
+                <div imc_container_input>
+                    <p for="altura">¿Cuánto mides? (cm)</p>
+                    <input type="number" name="altura" id="altura" placeholder="XX" required>
+                </div>
             </div>
-            <button class="btn-resultado" id="boton_resultado">Calcular tu imc</button>
+            <button class="btn-resultado" id="boton_resultado"><span id="contenidoBoton">Calcular tu imc</span></button>
         </div>
         <div class="imc_container_resultado" id="imc_container">
             <p>Tu resultado personal</p>
