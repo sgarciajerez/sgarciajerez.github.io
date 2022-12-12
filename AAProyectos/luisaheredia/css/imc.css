@@ -1,0 +1,53 @@
+:root{ 
+    --color-rosa-fuerte: #F28DB2;
+    --color-rosa-claro: #F2D5E0;
+    --color-verde-claro: #DFF2F0;
+    --color-verde-oscuro: #60BFAE;
+    --color-amarillo: #F2DA91;
+    --color-blanco:rgba(255, 255, 255, 0.9);
+}
+
+.header_pages{
+    display: grid;
+    padding: 5.625em 0 2.5em 0;
+    text-align: center;
+    color: var(--color-blanco);
+    margin: auto;
+    background-position: center;
+    background-image: url(images/blog6.jpg);
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-areas:
+    ". h1 ."
+    ;
+    border-bottom: 15px solid white;
+}
+
+.header_pages h1{
+    grid-area: h1;
+    background-color: var(--color-verde-oscuro);
+    border-radius: 0.9375em;
+    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+    padding: 0.3125em;
+    font-size: 2em;
+}
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1080px) {
+    .header_pages h1{
+        font-size: 1.3em;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 550px) {
+    .header_pages h1{
+        font-size: 1.25em;
+    }
+}
