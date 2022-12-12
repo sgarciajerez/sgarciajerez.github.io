@@ -55,22 +55,25 @@
     </header>
 
     <section class="container">
-        <p class="paragraph">
-            El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional. <br>
-
-            El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, pues la forma de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, debe considerarse como una guía aproximativa, pues puede no corresponder al mismo grado de gordura en diferentes individuos. 
-            <br>
-            
-            La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional dependiendo del IMC de una persona.
-        </p>
+        <div class="paragraph">
+            <p>
+                El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional. 
+            </p>
+            <p> 
+                El IMC constituye la medida poblacional más útil del sobrepeso y la obesidad, pues la forma de calcularlo no varía en función del sexo ni de la edad en la población adulta. No obstante, debe considerarse como una guía aproximativa, pues puede no corresponder al mismo grado de gordura en diferentes individuos. 
+            </p>
+            <p>
+                La Organización Mundial de la Salud, ha propuesto una clasificación del estado nutricional dependiendo del IMC de una persona.
+            </p>
+        </div>
         <div class="imc_container">
             <div class="imc_iconos">
-                <a href="" id="masculino">
-                    <img src="" alt="">
+                <a id="masculino" class="imc_container_iconos">
+                    <img id="icono_hombre" src="Images/IMC/icono_hombre.png" alt="">
                     <span>Masculino</span>
                 </a>
-                <a href="" id="femenino">
-                    <img src="" alt="">
+                <a id="femenino">
+                    <img id="icono_mujer" src="Images/IMC/icono_mujer.png" alt="">
                     <span>Femenino</span>
                 </a>
             </div>
@@ -80,15 +83,15 @@
             </div>
             <div class="imc_peso">
                 <label for="peso">Peso (Kg)</label>
-                <input type="number" name="peso" id="peso" placeholder="Ingresa tu peso...">
+                <input type="number" name="peso" id="peso" placeholder="Ingresa tu peso..." required>
             </div>
             <div class="imc_altura">
                 <label for="altura">Altura (cm)</label>
-                <input type="number" name="altura" id="altura" placeholder="Ingresa tu altura...">
+                <input type="number" name="altura" id="altura" placeholder="Ingresa tu altura..." required>
             </div>
             <button class="btn-resultado" id="boton_resultado">Calcular tu imc</button>
         </div>
-        <div class="imc_resultado">
+        <div class="imc_container_resultado" id="imc_container">
             <p>Tu resultado personal</p>
             <div id="imc_resultado_color">
                 <p>Tu IMC</p>
@@ -149,7 +152,7 @@
     <script>
         AOS.init({
             duration:1000,
-            once:true
+            once:true,
         });
 
     </script>

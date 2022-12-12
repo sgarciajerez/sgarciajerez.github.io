@@ -31,6 +31,103 @@
     font-size: 2em;
 }
 
+
+/* --------------ESTILOS IMC--------------------*/
+
+.container{
+    display: grid;
+    grid-template-columns: 20em 1fr 20em;
+    grid-template-areas: 
+    ". parrafo ."
+    ". imc_calculadora ."
+    ". imc_resultado ."
+    ;
+}
+
+.container .paragraph{
+    grid-area: parrafo;
+    margin: auto;
+    text-align: justify;
+    margin-top: 15px 0;
+}
+
+.container .imc_container{
+    grid-area: imc_calculadora;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas: 
+    "iconos edad"
+    "peso altura"
+    "imc_boton imc_boton"
+    ;
+}
+
+.imc_container .imc_iconos{
+    grid-area: iconos;
+    margin-bottom: 2em;
+    display: grid;
+    grid-template-areas: 
+    "masculino femenino";
+}
+.imc_iconos #masculino{
+    grid-area: masculino;
+}
+.imc_iconos #femenino{
+    grid-area: femenino;
+}
+
+.imc_iconos a{
+    display: grid;
+    grid-template-areas:
+    "imagen"
+    "span"
+    ;
+}
+
+.imc_iconos img{
+    grid-area: imagen;
+}
+.imc_iconos span{
+    grid-area: span;
+}
+
+.imc_iconos img:hover{
+    border-radius: 50%;
+    border: 5px solid var(--color-verde-oscuro);
+}
+.imagen_selected{
+    border-radius: 50%;
+    border: 5px solid var(--color-verde-oscuro);
+}
+
+.imc_container .imc_edad{
+    grid-area: edad;
+}
+.imc_container .imc_peso{
+    grid-area: peso;
+    margin-bottom: 2em;
+}
+.imc_container .imc_altura{
+    grid-area: altura;
+}
+.imc_container .btn-resultado{
+    grid-area: imc_boton;
+    margin: auto 100px;
+}
+
+.container .imc_container_resultado{
+    display: none;
+}
+
+.container .imc_container_resultado--show{
+    grid-area: imc_resultado;
+}
+
+
+
+/*--------------RESPONSIVE----------------*/
+
 @media (max-width: 1200px) {
     
 }
