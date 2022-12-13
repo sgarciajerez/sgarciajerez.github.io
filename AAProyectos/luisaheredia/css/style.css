@@ -121,10 +121,15 @@ a{
     margin-right: 10px;
 }
 
+#menu_open ul{
+  margin: 0;
+  padding: 0;
+}
+
 #menu_open li{
     list-style: none;
     text-align: center;
-    margin: 1.5625em 0;
+    margin: 1.5625em auto;
     font-size: 1.25em;
     font-family: 'Montserrat' 'Courier New', Courier, monospace;
 }

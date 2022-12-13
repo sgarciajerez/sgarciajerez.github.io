@@ -7,7 +7,7 @@
     --color-blanco:rgba(255, 255, 255, 0.9);
 }
 body{
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .header_pages{
@@ -36,10 +36,11 @@ body{
 
 .about_info{
     display: grid;
-    grid-template-columns: 0.2fr 0.8fr 1fr 0.2fr;
+    grid-template-columns: 20px 1fr 1fr 20px;
     grid-template-areas: 
     ". imagen texto ."
     ;
+    justify-items: center;
 }
 
 .about_info img{
@@ -53,8 +54,18 @@ body{
     grid-area: texto;
     color: var(--color-blanco);
     margin: 0 20px;
+    max-width: 30em;
     margin-bottom: 0.9375em;
     box-shadow: 10px 10px 30px gray;
+}
+.about_info_datos h2{
+    font-size: 1.4em;
+}
+.about_info_datos h3{
+    font-size: 1.3em;
+}
+.about_info_datos p{
+    font-size: 1em;
 }
 
 
@@ -79,6 +90,8 @@ body{
         ". texto ."
         ". imagen ."
         ;
+        justify-items: center;
+        justify-content: center;
     }
     .about_info img{
         margin: auto;
@@ -103,20 +116,18 @@ body{
     .header_pages h1{
         font-size: 1.25em;
     }
-    .blog_listado_contenedor img{
-        width: 17.5em;
-    }
     .about_info{
-        grid-template-columns: 1fr;
+        grid-template-columns: 10px 1fr 10px;
         grid-template-areas:
-        "texto"
-        "imagen"
+        ". texto ."
+        ". imagen ."
         ;
 
     }
     
     .about_info img{
         width: 18em;
+        margin: auto;
     }
 
 }
