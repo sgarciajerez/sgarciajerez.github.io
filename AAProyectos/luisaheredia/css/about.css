@@ -49,7 +49,7 @@ body{
 }
 
 .about_info_datos{
-    background-color: #F28DB2;
+    background-color: var(--color-verde-oscuro);
     padding: 1.875em;
     grid-area: texto;
     color: var(--color-blanco);
@@ -66,6 +66,48 @@ body{
 }
 .about_info_datos p{
     font-size: 1em;
+}
+
+.container_bars{
+    background-color: var(--color-rosa-fuerte);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.container_bars h2{
+    color: var(--color-blanco);
+    border-bottom: 2px solid white;
+}
+
+.progress {
+    height: 25px;
+    width: 800px;
+    border-radius: 5px;
+    background-color: #e6f3fa;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar {
+    height: 100%;
+    background: var(--color-verde-oscuro);
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+
+.bar_titulo{
+    font-weight: 800;
+    font-size: 1em;
+    color: var(--color-blanco);
+}
+ 
+.progress-bar-text {
+    margin-left: 10px;
+    font-weight: 800;
+    font-size: 0.8em ;
+    color: var(--color-blanco);
 }
 
 
