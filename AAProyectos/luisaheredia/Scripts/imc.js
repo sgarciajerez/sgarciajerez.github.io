@@ -6,6 +6,7 @@
     const MostrarTuPeso = document.getElementById("peso_actual");
     const MostrarPesoIdeal = document.getElementById("peso_ideal");
     const MostrarContenedor = document.getElementById("imc_container");
+    const fondoIMC = document.getElementById("imc_resultado_color");
     let resultado;
     let peso, peso1, peso2;
     let altura;
@@ -24,8 +25,24 @@
     function pesoIdeal() {
         peso1=(18.5*altura*altura).toFixed(1);
         peso2=(24.9*altura*altura).toFixed(1);
-        MostrarPesoIdeal.innerHTML=`${peso1}-${peso2} kg`;
-    } 
+        MostrarPesoIdeal.innerHTML=`${peso1} - ${peso2} kg`;
+    }
+
+    function colorIMC(){
+        if(resultado<18.5){
+            fondoIMC.style.backgroundColor="#4464ad";
+            fondoIMC.style.color="white";
+        }else if(resultado>=18.5&&resultado<25){
+            fondoIMC.style.backgroundColor="#6fb62a";
+            fondoIMC.style.color="white";
+        }else if(resultado>=25&&resultado<30){
+            fondoIMC.style.backgroundColor="#faba00";
+            fondoIMC.style.color="black";
+        }else{
+            fondoIMC.style.backgroundColor="#fd5238";
+            fondoIMC.style.color="black";
+        }
+    }
 
     function mostrarIMC(){
         peso = document.getElementById("peso").value;
@@ -36,6 +53,7 @@
         MostrarResultado.innerHTML=`${resultado.toFixed(2)}`;
         MostrarTuPeso.innerHTML=`${peso} kg`;
         pesoIdeal();
+        colorIMC();
         MostrarContenedor.className="imc_container_resultado--show";
         } else{
             alert("Introduzca todos los datos numéricos, por favor");

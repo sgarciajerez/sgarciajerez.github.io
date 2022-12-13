@@ -36,19 +36,33 @@
 
 .container{
     display: grid;
-    grid-template-columns: 20em 1fr 20em;
+    grid-template-columns: 5em 1fr 5em;
     grid-template-areas: 
     ". parrafo ."
     ". imc_calculadora ."
     ". imc_resultado ."
+    ". tabla ."
     ;
 }
 
 .container .paragraph{
     grid-area: parrafo;
     margin: auto;
+    width: 700px;
     text-align: justify;
     margin-top: 15px 0;
+}
+
+.paragraph h2{
+    text-align: center;
+}
+
+.container .imc_container_resultado--show{
+    grid-area: imc_resultado;
+}
+
+.tabla_IMC{
+    grid-area: tabla;
 }
 
 .container .imc_container{
@@ -57,12 +71,15 @@
     display: grid;
     grid-template-columns: 350px 350px;
     align-items: center;
-    grid-template-areas: 
+    justify-content: space-evenly;
+    grid-template-areas:
+    "titulo titulo" 
     "iconos edad"
     "peso altura"
     "imc_boton imc_boton"
     ;
     background-color: var(--color-rosa-fuerte);
+    box-shadow: 5px 3px 25px grey;
     padding: 50px;
     border-radius: 20px;
     color: var(--color-blanco);
@@ -76,6 +93,31 @@
     grid-template-areas: 
     "masculino femenino";
 }
+
+.imc_container .titulo_imc{
+    text-align: center;
+    font-size: 1.6em;
+    grid-area: titulo;
+    padding: 0 0 10px 0;
+    border-bottom: 2px solid white;
+}
+
+.imc_container .imc_edad{
+    grid-area: edad;
+}
+.imc_container .imc_peso{
+    grid-area: peso;
+    margin-bottom: 2em;
+}
+.imc_container .imc_altura{
+    grid-area: altura;
+    margin-bottom: 2em;
+}
+.imc_container .btn-resultado{
+    grid-area: imc_boton;
+    margin: auto 100px;
+}
+
 .imc_iconos #masculino{
     grid-area: masculino;
 }
@@ -110,23 +152,6 @@
 .imagen_selected:hover{
     border-radius: 50%;
     border: 5px solid var(--color-verde-oscuro);
-}
-
-
-.imc_container .imc_edad{
-    grid-area: edad;
-}
-.imc_container .imc_peso{
-    grid-area: peso;
-    margin-bottom: 2em;
-}
-.imc_container .imc_altura{
-    grid-area: altura;
-    margin-bottom: 2em;
-}
-.imc_container .btn-resultado{
-    grid-area: imc_boton;
-    margin: auto 100px;
 }
 
 .imc_input{
@@ -208,17 +233,77 @@
     opacity: 1;
     border-radius: 20px;
     color:var(--color-verde-oscuro);
-
 }
+
+/*-------------ESTILOS IMC RESULTADO--------------------------*/
 
 .container .imc_container_resultado{
     display: none;
 }
 
 .container .imc_container_resultado--show{
-    grid-area: imc_resultado;
+    text-align: center;
+    background-color: var(--color-verde-claro);
+    border-radius: 30px;
+    box-shadow: 5px 3px 25px grey;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-areas: 
+    "tittle_result tittle_result tittle_result"
+    "tu_IMC tu_peso rango_de_peso"
+    ;
+
 }
 
+.imc_container_resultado_titulo{
+    grid-area: tittle_result;
+    border-bottom: 5px solid white;
+}
+
+.imc_resultado_color{
+    grid-area: tu_IMC;
+    font-weight: 700;
+}
+.imc_tu_peso{
+    grid-area: tu_peso;
+}
+.imc_rango_de_peso{
+    grid-area: rango_de_peso;
+}
+
+.imc_rango_de_peso p{
+    margin-top: 0;
+}
+
+.tabla_IMC{
+    text-align: center;
+    justify-self: center;
+    background-color: black;
+    font-weight: 500;
+    margin: 50px;
+    box-shadow: 5px 3px 25px grey;
+}
+
+.tabla_IMC th{
+    background-color: var(--color-amarillo);
+    padding: 20px;
+    color: black;
+}
+.tabla_IMC td{
+    padding: 20px;
+}
+.tabla_IMC tr{
+    background-color: var(--color-verde-oscuro);
+    color: white;
+}
+.tabla_IMC tr:nth-child(2n){
+    background-color: var(--color-verde-claro);
+    color: black;
+}
 
 
 /*--------------RESPONSIVE----------------*/
@@ -232,14 +317,90 @@
         font-size: 1.3em;
     }
 
+    .container{
+        grid-template-columns: 20px 1fr 20px;
+        grid-template-areas: 
+        ". parrafo ."
+        ". imc_calculadora ."
+        ". imc_resultado ."
+        ". tabla ."
+        ;
+    }
+
+    .container .imc_container{
+        grid-template-columns: 1fr;
+        justify-items: center;
+        grid-template-areas:
+        "titulo" 
+        "iconos"
+        "edad"
+        "peso" 
+        "altura"
+        "imc_boton"
+        ;
+    }
+
+    .container .imc_container_resultado--show{
+        grid-template-areas: 
+        "tittle_result tittle_result"
+        "tu_IMC tu_peso" 
+        "rango_de_peso rango_de_peso"
+        ; 
+    }
+    .imc_rango_de_peso{
+        justify-self: center;
+    }
+    
+
 }
 
 @media (max-width: 768px) {
-
+    .container .paragraph{
+        width: 80%;
+    }
+    .container .imc_container_resultado--show{
+        justify-items: center;
+        margin: 15px;
+        grid-template-areas: 
+        "tittle_result"
+        "tu_IMC"
+        "tu_peso" 
+        "rango_de_peso"
+        ; 
+    }
+    .imc_rango_de_peso{
+        justify-self: none;
+    }
+        
 }
 
 @media (max-width: 550px) {
     .header_pages h1{
         font-size: 1.25em;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "parrafo"
+        "imc_calculadora"
+        "imc_resultado"
+        "tabla"
+        ;
+    }
+
+    .container .imc_container{
+        margin-top: 20px;
+        padding: 50px 15px;
+        margin: 0 10px;
+    }
+    .imc_container .btn-resultado{
+        margin: auto;
+    }
+
+    .imc_input{
+        width: 200px;
+    }
+    .tabla_IMC{
+        margin: 50px 5px;
     }
 }

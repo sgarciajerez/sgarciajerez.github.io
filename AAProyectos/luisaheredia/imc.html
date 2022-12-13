@@ -56,6 +56,7 @@
 
     <section class="container">
         <div class="paragraph">
+            <h2>¿QUÉ ES EL IMC?</h2>
             <p>
                 El Índice de Masa Corporal (IMC) es una medida de asociación entre el peso y la talla de una persona. El IMC es usado como uno de varios indicadores para evaluar el estado nutricional. 
             </p>
@@ -67,6 +68,7 @@
             </p>
         </div>
         <div class="imc_container">
+            <p class="titulo_imc">- CALCULADORA DE IMC -</p>
             <div class="imc_iconos imc_input">
                 <div class="imc_container_numero">
                     <span>1</span>
@@ -97,8 +99,6 @@
                     <p for="peso">¿Cuánto pesas? (Kg)</p>
                     <input type="number" name="peso" id="peso" placeholder="XX" required>    
                 </div>
-
-
             </div>
             <div class="imc_altura imc_input">
                 <div class="imc_container_numero">
@@ -111,23 +111,54 @@
             </div>
             <button class="btn-resultado" id="boton_resultado"><span id="contenidoBoton">Calcular tu imc</span></button>
         </div>
-        <div class="imc_container_resultado" id="imc_container">
-            <p>Tu resultado personal</p>
-            <div id="imc_resultado_color">
+        <div class="imc_container_resultado--show" id="imc_container">
+            <div class="imc_container_resultado_titulo">
+                <p>Tu resultado personal</p>
+            </div>
+            <div class="imc_resultado_color imc_input" id="imc_resultado_color">
                 <p>Tu IMC</p>
                 <span id="imc_resultado">xx</span>
             </div>
-            <div class="imc_rango_de_peso">
-                <div class="imc_rango_de_peso_actual">
-                    <p>Tu peso actual</p>
-                    <span id="peso_actual">xx</span>
-                </div>
-                <div class="imc_rango_de_peso_ideal">
-                    <p>Tu rango de peso ideal es</p>
-                    <span id="peso_ideal">xx</span>
-                </div>
+            <div class="imc_tu_peso imc_input">
+                <p>Tu peso actual</p>
+                <span id="peso_actual">xx</span>
+            </div>
+            <div class="imc_rango_de_peso imc_input">
+                <p>Tu rango de peso ideal es</p>
+                <span id="peso_ideal">xx</span>
             </div>
         </div>
+        <table class="tabla_IMC">
+            <tr>
+              <th>Peso corporal</th>
+              <th>Índice de Masa Corporal</th>
+            </tr>
+            <tr>
+              <td>Bajo peso</td>
+              <td>Menos de 18.5</td>
+            </tr>
+            <tr>
+              <td>Normal</td>
+              <td>18.5 – 24.9</td>
+            </tr>
+            <tr>
+              <td>Exceso de peso</td>
+              <td>25.0 – 29.9</td>
+            </tr>
+            <tr>
+              <td>Obesidad tipo I</td>
+              <td>30.0 - 34.9</td>
+            </tr>
+            <tr>
+              <td>Obesidad tipo II</td>
+              <td>35.0 - 39.9</td>
+            </tr>
+            <tr>
+              <td>Obesidad tipo III</td>
+              <td>Mayor que 40.0</td>
+            </tr>
+          </table>
+          
     </section>
     <footer>
         <div class="home_marco">
