@@ -82,7 +82,7 @@ a{
 
 #menu_open{
     height: 25em;
-    background-image: url(Images/fondo-menu.jpg);
+    background-image: url(images/fondo-menu.jpg);
     background-size: 18.75em;
     background-position-y: 2.5em;
     background-repeat: no-repeat;
@@ -731,7 +731,7 @@ a:hover{
     }
     #menu_open{
         height: 25em;
-        background-image: url(Images/fondo-menu.jpg);
+        background-image: url(images/fondo-menu.jpg);
         background-size: 18.75em;
         background-position-y: 2.5em;
         background-repeat: no-repeat;

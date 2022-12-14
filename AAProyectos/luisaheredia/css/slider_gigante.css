@@ -87,14 +87,15 @@
 
 .span_animado{
     font-weight: 700;
+    text-transform: uppercase;
     font-size: 1em;
     color: var(--color-blanco);
     font-family: 'Montserrat', sans-serif;
     white-space: nowrap;
-    width: 11ch;
+    width: 13ch;
     text-align: center;
     z-index: 500;
-    animation: typing 2s steps(11),
+    animation: typing 2s steps(13),
     blink .5s infinite step-end alternate;
     overflow:hidden;
 }
