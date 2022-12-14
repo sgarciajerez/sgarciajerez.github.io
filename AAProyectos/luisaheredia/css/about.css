@@ -82,7 +82,7 @@ body{
 
 .progress {
     height: 25px;
-    width: 800px;
+    width: 50em;
     border-radius: 5px;
     background-color: #e6f3fa;
     margin-bottom: 15px;
@@ -139,6 +139,10 @@ body{
         margin: auto;
     }
 
+    .progress {
+        width:35em;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -150,6 +154,10 @@ body{
 }
 .home_form_button{
     margin-bottom: 0;
+}
+
+.progress {
+    width:25em;
 }
 
 }
@@ -170,6 +178,9 @@ body{
     .about_info img{
         width: 18em;
         margin: auto;
+    }
+    .progress {
+        width:15em;
     }
 
 }
