@@ -1,0 +1,107 @@
+:root{ 
+    --color-rosa-fuerte: #F28DB2;
+    --color-rosa-claro: #F2D5E0;
+    --color-verde-claro: #DFF2F0;
+    --color-verde-oscuro: #60BFAE;
+    --color-amarillo: #F2DA91;
+    --color-blanco:rgba(255, 255, 255, 0.9);
+}
+
+.header_pages{
+    display: grid;
+    padding: 5.625em 0 2.5em 0;
+    text-align: center;
+    color: var(--color-blanco);
+    margin: auto;
+    background-position: center;
+    background-image: url(images/dieta.jpg);
+    grid-template-columns: 0.3fr 1fr 0.3fr;
+    grid-template-areas:
+    ". h1 ."
+    ;
+    border-bottom: 15px solid white;
+}
+
+.header_pages h1{
+    grid-area: h1;
+    background-color: var(--color-verde-oscuro);
+    border-radius: 0.9375em;
+    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+    padding: 0.3125em;
+    font-size: 2em;
+}
+
+.blog_listado{
+    padding: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dietas_servicios{
+    background-color: var(--color-rosa-fuerte);
+}
+.dietas_servicios_titulo{
+    margin: auto;
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+    font-size: 'Montserrat';
+    color: var(--color-blanco);
+    border-bottom: solid 2px var(--color-blanco);
+}
+
+.blog_listado_contenedor h2,h3{
+    color: var(--color-verde-oscuro);
+}
+
+.blog_listado_contenedor{
+    width: 100%;
+    max-width: 20em;
+    padding: 0.9375em;
+    margin: 50px 20px;
+    text-align: center;
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+}
+
+.blog_listado_contenedor img{
+    width: 19em;
+    box-shadow: 1px 1px 20px var(--color-amarillo);
+    margin: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.blog_listado_contenedor:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+
+@media (max-width: 1200px) {
+    
+}
+
+@media (max-width: 1080px) {
+    .header_pages h1{
+        font-size: 1.3em;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 550px) {
+    .header_pages h1{
+        font-size: 1.25em;
+    }
+    .blog_listado_contenedor img{
+        width: 17.5em;
+    }
+
+}
