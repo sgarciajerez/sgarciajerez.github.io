@@ -15,6 +15,7 @@
     margin: auto;
     background-position: center;
     background-image: url(images/dieta.jpg);
+    background-size: cover;
     grid-template-columns: 0.3fr 1fr 0.3fr;
     grid-template-areas:
     ". h1 ."
@@ -52,18 +53,39 @@
 }
 
 .blog_listado_contenedor h2,h3{
+    position: relative;
     color: var(--color-verde-oscuro);
+    z-index: 2;
 }
 
 .blog_listado_contenedor{
     width: 100%;
     max-width: 20em;
     padding: 0.9375em;
-    margin: 50px 20px;
+    margin: 2.5em 1em;
     text-align: center;
     background-color: var(--color-blanco);
     border-radius: 15px;
     box-shadow: 10px 2px 20px rgba(0, 0, 0, 0.63);
+    position: relative;
+    overflow: hidden;
+}
+
+.blog_listado .blog_listado_contenedor::before{
+    content: "";
+    background-color: var(--color-amarillo);
+    width: 100%;
+    position: absolute;
+    height:100%;
+    top: -100%;
+    left: 100%;
+    z-index: 1;
+    border-radius: 20px;
+    transition: .4s all ease-out;
+}
+.blog_listado .blog_listado_contenedor:hover::before{
+    top:0;
+    left: 0;
 }
 
 .blog_listado_contenedor img{
@@ -72,13 +94,159 @@
     margin: auto;
     display: block;
     border-radius: 15px;
+    z-index: 3;
+    position: relative;
 }
 
-.blog_listado_contenedor:hover{
+.blog_listado .blog_listado_contenedor:hover{
     cursor: pointer;
-    opacity: 0.7;
+    opacity: 1;
     transition: all 0.3s ease;
+    box-shadow: 5px 5px 20px var(--color-blanco);
 }
+
+.dietas_apuntate{
+    background-color: var(--color-rosa-claro);
+    padding: 4em;
+    margin: 1.2em 0;
+}
+
+.dietas_apuntate_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.dietas_apuntate_titulo{
+    margin: auto;
+    text-align: center;
+}
+.dietas_apuntate_titulo h3{
+    text-transform: uppercase;
+    font-size: 2.1em;
+    font-weight: bold;
+    margin: 0;
+}
+.dietas_apuntate_titulo p{
+    font-size: 1.4em;
+    font-weight: 300;
+    margin: 0 0 1.3em 0;
+}
+
+.dietas_apuntate_container .blog_listado_contenedor{
+    margin: 0.7em;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    cursor: default;
+    min-width: 15em;
+    padding: 0.7em 1.8em;
+}
+.dietas_apuntate_container_titulo h3{
+    color: var(--color-rosa-fuerte);
+}
+
+.dietas_apuntate_container_precio{
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;    
+}
+.dietas_apuntate_container_subtitulo{
+    margin: 0;
+    font-size: 1.2em;
+    margin-bottom: 2.1em;
+}
+
+.dietas_apuntate_container_listado{
+    list-style: none;
+    padding: 0;
+}
+
+.dietas_apuntate_container_listado li{
+    margin: 1em 0;
+}
+
+
+.blog_listado_contenedor .dietas_apuntate_container_boton{
+    margin-top: 1em;
+    width: 70%;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-rosa-fuerte);
+    color: var(--color-blanco);
+    font-size: 1.2em;
+    position: relative;
+    font-weight: bold;
+    overflow: hidden;
+    transition: .3s all ease-in;
+}
+
+.dietas_apuntate_container_boton::after{
+    content: "";
+    position: absolute;
+    background-color: var(--color-amarillo);
+    height: 2.5em;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    z-index: 1;
+    transition: .3s ease-in-out all;
+}
+
+.dietas_apuntate_container_boton span{
+    position: relative;
+    z-index: 2;
+}
+
+.dietas_apuntate_container_boton:hover{
+    opacity: 1;
+    color: var(--color-verde-oscuro);
+    width: 60%;
+    height: 2.1em;
+}
+
+.dietas_apuntate_container_boton:hover::after{
+    right: 0;
+}
+
+#bloque_centro{
+    background-color: var(--color-verde-oscuro);
+    color: var(--color-blanco);
+    height: 30em;
+}
+
+#bloque_centro h3{
+    color: var(--color-amarillo);
+}
+
+#bloque_centro .dietas_apuntate_container_listado{
+    margin-top: 4em;
+}
+#bloque_centro .dietas_apuntate_container_boton{
+    margin-top: 4em;
+    background-color: var(--color-amarillo);
+    color: var(--color-verde-oscuro);
+}
+
+#bloque_centro .dietas_apuntate_container_boton::after{
+    background-color: var(--color-rosa-fuerte);
+}
+#bloque_centro .dietas_apuntate_container_boton:hover{
+    color: var(--color-blanco);
+}
+
+.dieta_listado_informacion ul{
+    color: var(--color-blanco);
+}
+
+.home_pieform_contenedor ul li{
+    margin: 0.625em 0;
+    font-size: 0.875em;
+}
+
+
 
 
 @media (max-width: 1200px) {
@@ -89,6 +257,11 @@
     .header_pages h1{
         font-size: 1.3em;
     }
+    
+.dietas_apuntate_container{
+    flex-wrap: wrap;
+
+}
 
 }
 
