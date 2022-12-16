@@ -1,28 +1,16 @@
 const barras = document.querySelectorAll(".progress-bar");
 let aumento = 85;
 let indice=0;
-let intervalo;
 
 function colorearBarras(aumento,indice){
-        barras[indice].style.width=aumento+"%";
-        console.log(indice);
+        barras[indice].style.width=aumento+"%"; //A cada elemento le aplicamos el % de aumento
 }
 
-function descolorearBarras(){
-    barras.forEach(barra => {
-        barra.style.width="0%";
-    });
-}
-
-setInterval(()=>{
-    if(indice<barras.length){
+const Intervalo = setInterval(()=>{ 
     colorearBarras(aumento,indice);
-    aumento+=5;
-    indice++;
-    } else{
-        indice=0;
-        aumento=85;
-        descolorearBarras();
+    aumento+=5; //sumamos 5 al aumento cada vez que se repite el intervalo
+    indice++; //sumamos uno al indice para que pase por el siguiente elemento del arreglo
+    if(indice==4){//cuando el indice sea 4, limpiamos el intervalo
+        clearInterval(Intervalo);
     }
 },1000);
-
