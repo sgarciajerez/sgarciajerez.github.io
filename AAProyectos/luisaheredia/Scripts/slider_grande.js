@@ -1,5 +1,5 @@
 
-(function (){
+(function Slider_grande(){
 
     const sliders = [...document.querySelectorAll(".slider_body")];
     const arrowNext = document.querySelector("#after");

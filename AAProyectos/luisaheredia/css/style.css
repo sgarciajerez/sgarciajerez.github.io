@@ -600,6 +600,7 @@ header img:hover{
 
 
 footer{
+    position: relative;
     background-color: var(--color-verde-oscuro);
     margin: 0;
     padding: 0.9375em;
@@ -677,6 +678,61 @@ footer .home_marco_info_pie {
     font-weight: 500;
 }
 
+footer .flecha_inicio{
+    visibility: hidden;
+    opacity: 0;
+    color: white;
+}
+
+footer .flecha_inicio--show{
+    position: absolute;
+    top: 50%;
+    font-size: 30px;
+    right: 50px;
+    background-color: var(--color-rosa-fuerte);
+    color: var(--color-blanco);
+    box-shadow: 5px 5px 5px gray;
+    height: auto;
+    padding: 15px;
+    border-radius: 50%;
+    transition: all 0.2s;
+    animation: move 1s alternate;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+footer .flecha_inicio--show span{
+    position: relative;
+    z-index: 2;
+}
+
+
+footer .flecha_inicio--show::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    border-radius: 50%;
+    z-index: 1;
+    background-color: var(--color-amarillo);
+    transition: .2s all ease-in;
+}
+
+footer .flecha_inicio--show:hover{
+    color: var(--color-rosa-fuerte);
+    font-size: 40px;
+}
+footer .flecha_inicio--show:hover::after{
+    top:0;
+}
+
+@keyframes move {
+    from {right: 0px;}
+    to {right: 50px;}
+}
+
 
 /* Todos los hover de la página */
 
@@ -700,6 +756,7 @@ a:hover{
     opacity: 0.7;
     cursor: pointer;
 }
+
 
 
 /* El diseño responsive */

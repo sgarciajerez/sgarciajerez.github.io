@@ -18,6 +18,7 @@ body{
     margin: auto;
     background-position: center;
     background-image: url(images/about.jpg);
+    background-size: cover;
     grid-template-columns: 0.3fr 1fr 0.3fr;
     grid-template-areas:
     ". h1 ."
