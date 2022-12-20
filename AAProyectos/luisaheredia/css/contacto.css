@@ -64,18 +64,49 @@
     grid-area: input;
     padding: 0.4em;
     font-size: 0.8em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .contacto_form_grid select{
     padding: 0.4em;
     font-size: 0.8em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
-.contacto_form_privacidad{
-    color: black;
-    font-weight: 500;
+.contacto_form_grid .contacto_form_radius{
+    appearance: none;
+    margin: 0;
+    border: none;
+    background-color: var(--color-rosa-fuerte);
+    font-size: 1.1em;
+    position: relative;
+    border-radius: 50%;
 }
-.contacto_form textarea{
+
+.contacto_form_radius::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 0.3em;
+    height: 0.3em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: .3s transform ease-in-out;
+    box-shadow: inset 1em 1em var(--color-blanco);
+}
+.contacto_form_radius:checked::before{
+    transform: scale(1);
+}
+
+.contacto_form_grid textarea{
     font-size: 0.8em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 .contacto_form_nombre{
