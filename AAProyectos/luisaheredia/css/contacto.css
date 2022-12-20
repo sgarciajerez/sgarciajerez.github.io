@@ -31,37 +31,150 @@
     font-size: 2em;
 }
 
-.menu{
-    padding-top: 0.85em;   
+.contacto_form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "nombre phone"
+    "correo correo"
+    "genero ciudad"
+    "asunto asunto"
+    "comentario comentario"
+    "checkbox checkbox"
+    "button button"
+    ;
 }
 
-.contacto_form{
-    width: 400px;
+.contacto_form_grid{
+    display: grid;
+    align-content: center;
+    grid-template-rows: 2;
+    grid-template-areas: 
+    "label"
+    "input"
+    ;
 }
-.contacto_form label{
-    color: var(--color-rosa-fuerte);
+
+.contacto_form_grid label{
+    grid-area: label;
+    text-align: left;
+    margin: 0.5em 0;
+}
+.contacto_form_grid input{
+    grid-area: input;
+    padding: 0.4em;
+    font-size: 0.8em;
+}
+
+.contacto_form_grid select{
+    padding: 0.4em;
+    font-size: 0.8em;
+}
+.contacto_form_privacidad{
+    color: black;
+    font-weight: 500;
+}
+.contacto_form textarea{
+    font-size: 0.8em;
+}
+
+.contacto_form_nombre{
+    grid-area: nombre;
+    margin: 0 8px 0 0;
+}
+
+.contacto_form_phone{
+    grid-area: phone;
+}
+
+.contacto_form_correo{
+    grid-area: correo;
+}
+
+.contacto_form_genero{
+    grid-area: genero;
+}
+
+.contacto_form_ciudad{
+    grid-area: ciudad;
+}
+.contacto_form_asunto{
+    grid-area: asunto;
+}
+.contacto_form_comentario{
+    grid-area: comentario;
+}
+.contacto_form_checkbox{
+    grid-area: checkbox;
+    margin: 10px 0;
 }
 .contacto_form_button{
-        margin: auto;
-        text-align: center;
-        margin-top: 0.9375em;
-        padding: 0.625em;
-        width: 400px;
-        margin-bottom: 1.875em;
-        background-color: var(--color-rosa-fuerte);
-        border: none;
-        color: var(--color-blanco);
-        font-weight: bold;
-        font-size: 0.9375em;
+    grid-area: button;
 }
 
+#contacto_button{
+    position: relative;
+    background-color: var(--color-rosa-fuerte);
+    color: var(--color-blanco);
+    font-size: 1em;
+    font-weight: 800;
+    border: none;
+    padding: 0.7em;
+    margin: 0.5em 0 3em 0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all .3s ease-out;
+}
+
+#contacto_button::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-verde-oscuro);
+    z-index: 1;
+    top: 0;
+    right: 100%;
+    border-radius: 20px;
+    transition: all .3s ease-in;
+}
+
+#contacto_button:hover{
+    opacity: 1;
+    box-shadow: 2px 5px 20px var(--color-amarillo);
+    font-size: 1.1em;
+}
+
+#contacto_button:hover::before{
+    right: 0;
+}
+
+#contacto_button span{
+    position: relative;
+    z-index: 2;
+}
+/* grid de los dos elementos de esta página */
+
+.contacto_info{
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr 100px;
+    align-content: center;
+    grid-template-areas:
+    ". form mapa ."
+    ;
+}
+
+.contacto_info_form{
+    grid-area: form;
+}
 .contacto_mapa{
     margin-top: 3.4375em;
+    grid-area: mapa;
 }
 
 .home_mapa{
-    width: 20em;
-    height: 38em;
+    width: 18em;
+    height: 34em;
     margin: auto;
 }
 
@@ -78,13 +191,27 @@
     .header_pages h1{
         font-size: 1.3em;
     }
-
+    .contacto_info{
+        grid-template-columns: 100px 1fr 100px;
+        grid-template-areas:
+        ". form ."
+        ". mapa ."
+        ;
+    }
 }
 
 @media (max-width: 768px) {
     .contacto_form_button{
         margin-bottom: 0.3em;
 }
+
+    .contacto_info{
+        grid-template-columns:1fr;
+        grid-template-areas:
+        "form"
+        "mapa"
+        ;
+    }
 .home_form_button{
     margin-bottom: 0;
 }
@@ -98,5 +225,22 @@
     .blog_listado_contenedor img{
         width: 17.5em;
     }
+    .contacto_form{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nombre" 
+        "phone"
+        "correo"
+        "genero"
+        "ciudad"
+        "asunto"
+        "comentario"
+        "checkbox"
+        "button"
+        ;
+     }
+     .contacto_form_nombre{
+        margin: 0;
+     }
 
 }

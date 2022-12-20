@@ -28,25 +28,26 @@ a{
 
 .menu{
     background-color: var(--color-amarillo);
-    position:fixed;
     width: 100%;
     z-index: 500;
+    position: fixed;
     box-shadow: 5px 2px 12px grey;
-
 }
 
 #menu_abierto ul{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
 }
 
 #menu_abierto ul a{
     list-style: none;
     color: var(--color-verde-oscuro);
     font-weight: bold;
-    padding: 0.9375em 2em; 
-
+    padding: 0.9375em 1.5em;
+    margin: auto;
 }
+
 #menu_abierto ul li{
     list-style: none;
 }
@@ -687,13 +688,13 @@ footer .flecha_inicio{
 footer .flecha_inicio--show{
     position: absolute;
     top: 50%;
-    font-size: 30px;
-    right: 50px;
+    font-size: 1.3em;
+    right: 1em;
     background-color: var(--color-rosa-fuerte);
     color: var(--color-blanco);
     box-shadow: 5px 5px 5px gray;
     height: auto;
-    padding: 15px;
+    padding: 0.7em;
     border-radius: 50%;
     transition: all 0.2s;
     animation: move 1s alternate;
@@ -722,7 +723,7 @@ footer .flecha_inicio--show::after{
 
 footer .flecha_inicio--show:hover{
     color: var(--color-rosa-fuerte);
-    font-size: 40px;
+    font-size: 1.5em;
 }
 footer .flecha_inicio--show:hover::after{
     top:0;
@@ -730,7 +731,7 @@ footer .flecha_inicio--show:hover::after{
 
 @keyframes move {
     from {right: 0px;}
-    to {right: 50px;}
+    to {right: 1em;}
 }
 
 
@@ -856,6 +857,11 @@ a:hover{
         margin: 0.5em auto;
         margin-bottom: 1.25em;
     }
+    footer{
+        grid-template-areas:
+        "marco"
+        "listado";
+    }
 }
 
 @media (max-width: 768px) {
@@ -891,12 +897,6 @@ a:hover{
       .home_slider_muestra{
         min-width: 15em;
       }
-
-      footer{
-        grid-template-areas:
-        "marco"
-        "listado";
-    }
 }
 
 @media (max-width: 550px) {
