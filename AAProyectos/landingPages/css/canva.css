@@ -178,4 +178,83 @@ body {
     align-items: center;
 }
 
+/*-----HOME INFO----------*/
+
+.home-info-container{
+    margin: auto;
+}
+
+.home-info-container .home-info-tittle{
+    text-align: center;
+    font-size: 35px;
+}
+
+.home-info-container .home-info-data-container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.home-info-container .home-info-data-container .home-info-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-info-container .home-info-data-container .home-info-data .home-info-data-tittle{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: gray;
+    margin: 5px;
+}
+.home-info-container .home-info-data-container .home-info-data .home-info-data-subtittle{
+    font-size: 12px;
+    text-align: center;
+    color: gray;
+    margin: 5px;
+}
+
+.home-videocomponent{
+    margin: 100px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-videocomponent .home-videocomponent-data-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.home-videocomponent .home-videocomponent-data-container video{
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+}
+
+.home-videocomponent .home-videocomponent-data-container .home-videocomponent-data-tittle {
+    position: relative;
+    display: block;
+    width: 500px;
+}
+.home-videocomponent .home-videocomponent-data-container .home-videocomponent-data-tittle h3{
+    font-size: 50px;
+    margin: 0;
+}
+
+.home-videocomponent .home-videocomponent-data-container .home-videocomponent-data-tittle p{
+    font-size: 20px;
+    color: grey;
+}
+
+
+
+
+
 
