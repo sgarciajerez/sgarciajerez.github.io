@@ -10,7 +10,47 @@ body {
     font-size: 16px;
 }
 
+/*--------ESTILOS REUTILIZADOS-----------------*/ 
+
+.button-grey{
+    background-color: var(--color-gris);
+    border: none;
+    color:var(--color-negro);
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.button-purple{
+    background-color: var(--color-morado);
+    border: none;
+    margin: 0 15px 0 0;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius:5px;
+    cursor: pointer;
+}
+
+.black-tittle{
+    font-size: 3.5rem;
+    margin: 0;
+    text-align: center;
+}
+
+.grey-tittle{
+    font-size: 1.4rem;
+    color: gray;
+    text-align: center;
+}
+
+/*--------------HEADER------------------*/
+
 .header-contenedor{
+    margin: 40px 0;
     display: grid;
     grid-template-columns:1fr 1fr;
     grid-template-areas:
@@ -37,24 +77,6 @@ body {
     justify-content: flex-start;
 }
 
-.header-contenedor .header-left .header-buttons .header-buttons-left {
-    background-color: var(--color-morado);
-    border: none;
-    margin: 0 15px 0 0;
-    color: white;
-    font-size: 18px;
-    padding: 12px;
-    border-radius:5px;
-}
-.header-contenedor .header-left .header-buttons .header-buttons-right {
-    background-color: var(--color-gris);
-    border: none;
-    color:var(--color-negro);
-    font-size: 18px;
-    padding: 12px;
-    border-radius:5px;
-}
-
 .header-contenedor .header-right{
     grid-area: right;
     display: flex;
@@ -64,9 +86,96 @@ body {
 }
 
 .header-contenedor .header-right .header-right-imagen {
-    margin: 5px;
+    margin: 0px;
+    padding: 10px;
+    transition: all .2s ease-in;
+}
+
+.header-contenedor .header-right .header-right-imagen:hover{
+    padding: 0;
 }
 
 .header-contenedor .header-right .header-right-imagen img{
     border-radius: 10px;
+    cursor: pointer;
+    z-index: 1;
+    position: relative;
+    transition: all .2s ease-in;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
+
+/*------------------REDES----------------------*/
+
+.redes-contenedor{
+    margin: 100px 0;
+}
+
+.redes-tittle-container{
+    margin: auto;
+    width: 1200px;
+}
+
+.redes-video-container{
+    width: 1200px;
+    margin: 40px auto;
+}
+
+.redes-contenedor .home-video-tittle-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.redes-contenedor .home-video-tittle-container li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.redes-contenedor .home-video-tittle-container li:hover{
+    color: var(--color-morado);
+}
+
+.redes-contenedor .home-video-tittle-container .home-video-tittle{
+    color: rgba(0, 0, 0, 0.700);
+}
+
+.redes-contenedor .home-video-tittle-container .home-video-tittle--show{
+    color: var(--color-morado);
+}
+
+.home-video-data-container{
+    width: 100%;
+    margin: 10px auto;
+    position: relative;
+}
+
+.home-video-data-container video{
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+    padding: auto;
+}
+
+.home-video-data-container .home-video{
+    display: none;
+}
+
+.home-video-data-container .home-video--show {
+    display: block;
+}
+
+.home-video-subtittle{
+    width: 1000px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+
+
