@@ -11,7 +11,7 @@
         videoShow.className = "home-video"
         video[index].className = "home-video--show";
         videoShow = video[index];
-        console.log (videoShow);
+        videoShow.autoplay="true";
     }
     function cambiarTitulo (index) {
         tituloSelected.className = "home-video-tittle"
