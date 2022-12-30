@@ -194,6 +194,7 @@ button:hover{
 
 .home-video-data-container .home-video--show {
     display: block;
+    transition: all .3s ease-in;
 }
 
 .home-video-subtittle{

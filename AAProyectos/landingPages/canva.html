@@ -59,14 +59,14 @@
         </div>
         <div class="redes-video-container">
             <ul class="home-video-tittle-container">
-                <li class="home-video-tittle--show">Redes Sociales</li>
-                <li class="home-video-tittle">Presentaciones</li>
-                <li class="home-video-tittle">Vídeo</li>
-                <li class="home-video-tittle">Imprimir Diseños</li>
-                <li class="home-video-tittle">Edición de foto</li>
+                <li class="home-video-tittle home-video-tittle--show" id="redes_sociales">Redes Sociales</li>
+                <li class="home-video-tittle" id="presentaciones">Presentaciones</li>
+                <li class="home-video-tittle" id="video">Vídeo</li>
+                <li class="home-video-tittle" id="imprimir">Imprimir Diseños</li>
+                <li class="home-video-tittle" id="foto">Edición de foto</li>
             </ul>
             <div class="home-video-data-container">
-                <video loop="true" src="img/canva/redes/1.mp4" class="home-video--show" autoplay="true" data-aos="fade-up"></video>
+                <video loop="true" src="img/canva/redes/1.mp4" class="home-video home-video--show" autoplay="true"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/2.mp4" class="home-video"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/3.mp4" class="home-video"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/4.mp4" class="home-video"></video>
@@ -135,8 +135,8 @@
             <div class="home-price-selector-right">
                 <p><strong>Ciclo de facturación: </strong><span>Te ahorras un 16%</span> con la suscripción anual</p>
                 <div class="home-price-selector-buttons">
-                    <button class="button-selected">Mensual</button>
-                    <button class="button-unselected">Anual</button>
+                    <button class="button-selected" id="button-mes">Mensual</button>
+                    <button class="button-unselected" id="button-ano">Anual</button>
                 </div>
             </div>
         </div>
@@ -167,7 +167,7 @@
                     <p class="home-price-data-subtittle">Para particulares, emprendedores/as y diseñadores/as independientes que quieran acceso ilimitado a contenido premium para crear diseños profesionales fácilmente.</p>
                 </div>
                 <div class="home-price-data-price">
-                    <p class="home-price-data-price-tittle" id = "price-pro">11,99€</p>
+                    <p class="home-price-data-price-tittle" id="price-pro">11,99€</p>
                     <p class="home-price-data-price-subtittle">al <span class="price-text-cambio">mes</span> para una persona</p>
                 </div>
                 <div class="home-price-data-listado">
@@ -239,6 +239,8 @@
             <span><a href="https://twitter.com/sgarciajerez">Twitter</a></span>
         </div>    
     </footer>
+    <script src="js/canva/precio.js"></script>
+    <script src="js/canva/redes.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
