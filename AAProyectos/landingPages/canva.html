@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/canva/Canvalogo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/canva.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../luisaheredia/css/fonts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;500;700;800&display=swap" rel="stylesheet">
@@ -15,7 +17,7 @@
     <header class="header-contenedor">
         <div class="header-left">
             <div class="header-tittle">
-                <h1>El diseño <span>al alcance de todos y gratis.</span></h1>
+                <h1>El diseño <span class="color-gradient">al alcance de todos y gratis.</span></h1>
                 <p>Crea contenido visual increíble sin necesidad de tener experiencia en diseño. Empieza por tu cuenta o invita a otros a colaborar.</p>
             </div>
             <div class="header-buttons">
@@ -64,7 +66,7 @@
                 <li class="home-video-tittle">Edición de foto</li>
             </ul>
             <div class="home-video-data-container">
-                <video loop="true" src="img/canva/redes/1.mp4" class="home-video--show" autoplay="true"></video>
+                <video loop="true" src="img/canva/redes/1.mp4" class="home-video--show" autoplay="true" data-aos="fade-up"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/2.mp4" class="home-video"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/3.mp4" class="home-video"></video>
                 <video loop="true" autoplay="true" src="img/canva/redes/4.mp4" class="home-video"></video>
@@ -103,23 +105,23 @@
     </section>
     <aside class="home-videocomponent">
         <div class="home-videocomponent-data-container">
-            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/1.mp4"></video>
+            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/1.mp4" data-aos="fade-right"></video>
             <div class="home-videocomponent-data-tittle">
-                <h3><span>Visualiza tus ideas</span> fácilmente</h3>
+                <h3><span class="color-gradient">Visualiza tus ideas</span> fácilmente</h3>
                 <p>Empieza siempre con inspiración. Personaliza más de 500.000 plantillas para cualquier necesidad, gratis y sin esfuerzo.</p>
             </div>
         </div>
         <div class="home-videocomponent-data-container">
             <div class="home-videocomponent-data-tittle">
-                <h3>Crea contenido con <span> millones de recursos gratis</span></h3>
+                <h3>Crea contenido con <span class="color-gradient"> millones de recursos gratis</span></h3>
                 <p>Encuentra todo lo que necesitas para diseñar desde un mismo lugar. Canva tiene una biblioteca multimedia extensa de fotos, vídeos, elementos gráficos, audios de stock gratis, y más.</p>
             </div>
-            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/2.mp4"></video>
+            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/2.mp4" data-aos="fade-left"></video>
         </div>
         <div class="home-videocomponent-data-container">
-            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/3.mp4"></video>
+            <video class="home-videocomponent-data" loop="true" autoplay="true" src="img/canva/Webcomponent/3.mp4" data-aos="fade-right"></video>
         <div class="home-videocomponent-data-tittle">
-                <h3>Crea mejores diseños <span>en equipo</span></h3>
+                <h3>Crea mejores diseños <span class="color-gradient">en equipo</span></h3>
                 <p>Crea tu propio proyecto o colabora con tanta gente como necesites. Añade comentarios, asigna acciones o colabora en los diseños, y todo gratis.</p>
             </div>
         </div>
@@ -139,7 +141,7 @@
             </div>
         </div>
         <div class="home-price-data-container">
-            <div class="home-price-data">
+            <div class="home-price-data" data-aos="fade-right">
                 <div class="home-price-data-tittle-container">
                     <p class="home-price-data-tittle">Canva Gratis</p>
                     <p class="home-price-data-subtittle">Para cualquier persona que quiera diseñar, tanto por su cuenta como en equipo</p>
@@ -151,70 +153,67 @@
                 <div class="home-price-data-listado">
                     <p>Te encantará todo lo que incluye:</p>
                     <ul class="home-price-data-listado-container">
-                        <li>Editor con herramienta de arrastrar y soltar para facilitar la personalización de tus diseños.</li>
-                        <li>Más de 250.000 plantillas gratis.</li>
-                        <li>Más de 100 tipos de diseños (publicaciones para redes sociales, presentaciones, cartas y mucho más).</li>
-                        <li>Más de 1 millón de fotos y elementos gráficos gratis.</li>
-                        <li>Invita a otras personas a diseñar y colaborar.</li>
+                        <li><span class="icon-checkmark"></span> Editor con herramienta de arrastrar y soltar para facilitar la personalización de tus diseños.</li>
+                        <li><span class="icon-checkmark"></span> Más de 250.000 plantillas gratis.</li>
+                        <li><span class="icon-checkmark"></span> Más de 100 tipos de diseños (publicaciones para redes sociales, presentaciones, cartas y mucho más).</li>
+                        <li><span class="icon-checkmark"></span> Más de 1 millón de fotos y elementos gráficos gratis.</li>
                     </ul>
                 </div>
                 <button class="home-price-data-button button-grey">Empieza a diseñar</button>
             </div>
             <div class="home-price-data">
                 <div class="home-price-data-tittle-container">
-                    <p class="home-price-data-tittle">Canva Gratis</p>
-                    <p class="home-price-data-subtittle">Para cualquier persona que quiera diseñar, tanto por su cuenta como en equipo</p>
+                    <p class="home-price-data-tittle">Canva Pro</p>
+                    <p class="home-price-data-subtittle">Para particulares, emprendedores/as y diseñadores/as independientes que quieran acceso ilimitado a contenido premium para crear diseños profesionales fácilmente.</p>
                 </div>
                 <div class="home-price-data-price">
-                    <p class="home-price-data-price-tittle">0€</p>
-                    <p class="home-price-data-price-subtittle">al mes para una o más personas</p>
+                    <p class="home-price-data-price-tittle" id = "price-pro">11,99€</p>
+                    <p class="home-price-data-price-subtittle">al <span class="price-text-cambio">mes</span> para una persona</p>
                 </div>
                 <div class="home-price-data-listado">
                     <p>Te encantará todo lo que incluye:</p>
                     <ul class="home-price-data-listado-container">
-                        <li>Editor con herramienta de arrastrar y soltar para facilitar la personalización de tus diseños.</li>
-                        <li>Más de 250.000 plantillas gratis.</li>
-                        <li>Más de 100 tipos de diseños (publicaciones para redes sociales, presentaciones, cartas y mucho más).</li>
-                        <li>Más de 1 millón de fotos y elementos gráficos gratis.</li>
-                        <li>Invita a otras personas a diseñar y colaborar.</li>
+                        <li><span class="icon-checkmark"></span> Todas las funcionalidades gratuitas.</li>
+                        <li><span class="icon-checkmark"></span> Crea carpetas exclusivas para proyectos específicos.</li>
+                        <li><span class="icon-checkmark"></span> Cambia el tamaño de tus diseños todas las veces que quieras con la Redimensión mágica.</li>
                     </ul>
                 </div>
-                <button class="home-price-data-button button-grey">Empieza a diseñar</button>
+                <button class="home-price-data-button button-grey">Quiero probar Canva Pro gratis</button>
             </div>
-            <div class="home-price-data">
+            <div class="home-price-data" data-aos="fade-left">
                 <div class="home-price-data-tittle-container">
-                    <p class="home-price-data-tittle">Canva Gratis</p>
-                    <p class="home-price-data-subtittle">Para cualquier persona que quiera diseñar, tanto por su cuenta como en equipo</p>
+                    <p class="home-price-data-tittle">Canva para Equipos</p>
+                    <p class="home-price-data-subtittle">Incluye todas las funciones premium de Canva Pro. Además, creemos que te van a encantar las funciones diseñadas para facilitar la colaboración en equipos.</p>
                 </div>
                 <div class="home-price-data-price">
-                    <p class="home-price-data-price-tittle">0€</p>
-                    <p class="home-price-data-price-subtittle">al mes para una o más personas</p>
+                    <p class="home-price-data-price-tittle" id="price-equipo">13,99€</p>
+                    <p class="home-price-data-price-subtittle">al <span class="price-text-cambio">mes</span> para 5* personas</p>
                 </div>
                 <div class="home-price-data-listado">
                     <p>Te encantará todo lo que incluye:</p>
                     <ul class="home-price-data-listado-container">
-                        <li>Editor con herramienta de arrastrar y soltar para facilitar la personalización de tus diseños.</li>
-                        <li>Más de 250.000 plantillas gratis.</li>
-                        <li>Más de 100 tipos de diseños (publicaciones para redes sociales, presentaciones, cartas y mucho más).</li>
-                        <li>Más de 1 millón de fotos y elementos gráficos gratis.</li>
-                        <li>Invita a otras personas a diseñar y colaborar.</li>
+                        <li><span class="icon-checkmark"></span> Todas las funcionalidades Gratuitas.</li>
+                        <li><span class="icon-checkmark"></span> Todas las funcionalidades Pro.</li>
+                        <li><span class="icon-checkmark"></span> Invita a otras personas a diseñar y colaborar.</li>
+                        <li><span class="icon-checkmark"></span> Inicio de sesión único (SSO).</li>
+                        <li><span class="icon-checkmark"></span> Asistencia 24 horas todos los días.</li>
                     </ul>
                 </div>
-                <button class="home-price-data-button button-grey">Empieza a diseñar</button>
+                <button class="home-price-data-button button-grey">Quiero probar Canva para Equipos Gratis</button>
             </div>
         </div>
         <aside class="home-price-footer">
             <div class="home-price-footer-left">
-                <img src="img/canva/price/footer.avif" alt="">
+                <img src="img/canva/price/footer.avif" alt="" data-aos="fade-up">
             </div>
             <div class="home-price-footer-right">
                 <h3>¿Trabajas en equipo?</h3>
                 <p>Invita a todos los de tu equipo a crear conjuntamente tu mejor contenido con Canva para Equipos.</p>
                 <ul>
-                    <li>Colaboraciones entre equipos, departamentos, empresas o países.</li>
-                    <li>Empodera a todo el equipo para crear contenido visual interesante.</li>
-                    <li>Aprovecha las herramientas de gestión de marca para seguir siempre el estilo de tu marca.</li>
-                    <li>Aprovecha las herramientas de gestión de marca para seguir siempre el estilo de tu marca.</li>
+                    <li><span class="icon-checkmark"></span> Colaboraciones entre equipos, departamentos, empresas o países.</li>
+                    <li><span class="icon-checkmark"></span> Empodera a todo el equipo para crear contenido visual interesante.</li>
+                    <li><span class="icon-checkmark"></span> Aprovecha las herramientas de gestión de marca para seguir siempre el estilo de tu marca.</li>
+                    <li><span class="icon-checkmark"></span> Aprovecha las herramientas de gestión de marca para seguir siempre el estilo de tu marca.</li>
                 </ul>
                 <button class="button-purple">Más información sobre Canva para equipos</button>
             </div>
@@ -238,9 +237,15 @@
             <span><a href="https://sgarciajerez.github.io/">Portfolio</a></span>
             <span><a href="https://github.com/sgarciajerez?tab=repositories">Github</a></span>
             <span><a href="https://twitter.com/sgarciajerez">Twitter</a></span>
-        </div>
-        
+        </div>    
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration:1000,
+            once:true
+        });
 
+    </script>
 </body>
 </html>

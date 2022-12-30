@@ -48,6 +48,18 @@ body {
     text-align: center;
 }
 
+.icon-checkmark{
+    color: var(--color-morado);
+    margin-right: 5px;
+}
+
+.color-gradient{
+    background-color: var(--color-gris-fondo);
+    background: linear-gradient(90deg, #7d2ae8, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+}
+
 /*--------------HEADER------------------*/
 
 .header-contenedor{
@@ -329,6 +341,9 @@ body {
     border: 1px solid rgba(57,76,96,.15);
     padding: 20px;
     width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .home-price .home-price-data-container .home-price-data .home-price-data-tittle-container .home-price-data-tittle{
